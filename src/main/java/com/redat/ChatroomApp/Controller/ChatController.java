@@ -18,8 +18,8 @@ public class ChatController {
      * @param chatMessage ChatMessage
      * @return ChatMessage
      */
-    @MessageMapping("/chat.sendMessage")
-    @SendTo("/topic/public")
+    @MessageMapping("/chat.sendMessage/{roomId}")
+    @SendTo("/topic/{roomId}")
     public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
         return chatMessage;
     }
@@ -30,8 +30,8 @@ public class ChatController {
      * @param simpMessageHeaderAccessor SimpMessageHeaderAccessor
      * @return ChatMessage
      */
-    @MessageMapping("/chat.addUser")
-    @SendTo("/topic/public")
+    @MessageMapping("/chat.addUser/{roomId}")
+    @SendTo("/topic/{roomId}")
     public ChatMessage addUser(@Payload ChatMessage chatMessage,
                                SimpMessageHeaderAccessor simpMessageHeaderAccessor) {
         // Add username to websocket session:

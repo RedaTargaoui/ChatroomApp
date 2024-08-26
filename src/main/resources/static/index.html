@@ -7,12 +7,16 @@
 </head>
 <body>
 
+<!-- Username Page -->
 <div id="username-page">
     <div class="username-page-container">
-        <h1 class="title">Enter your username to enter to Chatroom</h1>
+        <h1 class="title">Enter your username and chat room</h1>
         <form id="usernameForm" name="usernameForm">
             <div class="form-group">
                 <input type="text" id="name" placeholder="Username" autocomplete="off" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="text" id="room" placeholder="Room ID (e.g., 'room1')" autocomplete="off" class="form-control" />
             </div>
             <div class="form-group">
                 <button type="submit" class="accent username-submit">Enter</button>
@@ -21,16 +25,17 @@
     </div>
 </div>
 
+<!-- Chat Page -->
 <div id="chat-page" class="hidden">
     <div class="chat-container">
         <div class="chat-header">
-            <h2>Chatroom</h2>
+            <h2 id="chatroom-name">Chatroom</h2>
         </div>
         <div class="connecting">
             Connecting...
         </div>
         <ul id="messageArea">
-
+            <!-- Messages will appear here -->
         </ul>
         <form id="messageForm" name="messageForm">
             <div class="form-group">
