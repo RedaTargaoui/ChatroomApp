@@ -1,6 +1,6 @@
 # Spring Boot WebSocket Chat Application
 
-This is a simple chat application built using Spring Boot and WebSockets. 
+This is a chat application built using Spring Boot and WebSockets. 
 The application supports multiple chat rooms, allowing users to join 
 different rooms by specifying a room ID. Messages are broadcast only to 
 the participants in the specified room.
